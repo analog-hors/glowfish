@@ -1,0 +1,16 @@
+[workspace]
+members = [
+    "cozy-chess",
+    "types",
+    "glowfish"
+]
+
+[profile.bench]
+lto = "thin"
+codegen-units = 1
+
+[profile.release]
+opt-level = "z"
+lto = true
+panic = "abort"
+strip = true
